@@ -4,15 +4,15 @@
 //The function should display the number along with the message "Another sheep jumps over the fence" until no more sheep are left.
 
 
-What is the input to the program? A number (3)
-What is the output of the program? Total number of sheep. 
-  Output:
-  3: Another sheep jumps over the fence
-  2: Another sheep jumps over the fence
-  1: Another sheep jumps over the fence
-  All sheep jumped over the fence
-What is the input to each recursive call? To implement this iteratively, you would simply use a loop to go through each number in the list and add them.
-What is the output of each recursive call?  Make the list shorter until we reach the point where we have only o item (sheep) in the list
+// What is the input to the program? A number (3)
+// What is the output of the program? Total number of sheep. 
+//   Output:
+//   3: Another sheep jumps over the fence
+//   2: Another sheep jumps over the fence
+//   1: Another sheep jumps over the fence
+//   All sheep jumped over the fence
+// What is the input to each recursive call? To implement this iteratively, you would simply use a loop to go through each number in the list and add them.
+// What is the output of each recursive call?  Make the list shorter until we reach the point where we have only o item (sheep) in the list
   
 Code example:
 
