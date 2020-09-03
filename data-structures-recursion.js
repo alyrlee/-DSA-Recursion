@@ -221,5 +221,18 @@ For example, the program should take 3 as an input and print 11 as output, or 25
 Note that the binary representation of 0 should be 0.
 =============================================== */
 
+const binaryRep = function(n) {
+   if (n === 0) {
+  return '0';
+}  
+const dividedNum = Math.floor(n/2);
+  const remainder = n % 2;
+  if (dividedNum === 0) {
+      return `${remainder}`;
+  }
+  return binaryRep(dividedNum) + remainder.toString();
+};
+
+console.log(binaryRep(25));
 
 
