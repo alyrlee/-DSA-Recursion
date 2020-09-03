@@ -66,35 +66,55 @@ return str.slice(-1) + reverseString(str.slice(0,-1));
 let str = "Hello";
 console.log(reverseString(str));
 
-/* ======== 2. Power Calculator =================
+/* ======== 4. nth Triangular Number =================
+Calculate the nth triangular number.
+A triangular number counts the objects that can form an equilateral triangle. 
+The nth triangular number is the number of dots composing a triangle with n dots 
+on a side, and is equal to the sum of the n natural numbers from 1 to n. 
+This is the Triangular Number Sequence: 1, 3, 6, 10, 15, 21, 28, 36, 45.
 =============================================== */
 
-/* ======== 2. Power Calculator =================
+const nthTriangle = function(numDots) {
+//base
+  if (numDots === 1) {
+    return numDots;
+  }
+
+return numDots + nthTriangle(numDots-1);
+ };
+
+ console.log(nthTriangle(6))
+
+/* ======== 5. String Splitter =================
+Write a recursive function that splits a string based on a separator (similar to String.prototype.split).
+Don't use JS array's split function to solve this problem.
 =============================================== */
 
-/* ======== 2. Power Calculator =================
+console.log('String Splitter')
+
+function stringSplitter(){
+
+}
+
+/* ======== 6. Fibonacci =================
 =============================================== */
 
-/* ======== 2. Power Calculator =================
+/* ======== 7. Factorial =================
 =============================================== */
 
-/* ======== 2. Power Calculator =================
+/* ======== 8. Find a way out of the maze ====
 =============================================== */
 
-/* ======== 2. Power Calculator =================
+/* ======== 9. Find ALL the ways out of the maze =
 =============================================== */
 
-/* ======== 2. Power Calculator =================
+/* ======== 10. Anagrams =================
 =============================================== */
 
-/* ======== 2. Power Calculator =================
+/* ======== 11. Organization Chart =================
 =============================================== */
 
-/* ======== 2. Power Calculator =================
+/* ======== 12. Binary Representation =================
 =============================================== */
 
-/* ======== 2. Power Calculator =================
-=============================================== */
 
-/* ======== 2. Power Calculator =================
-=============================================== */
