@@ -99,20 +99,121 @@ function stringSplitter(){
 /* ======== 6. Fibonacci =================
 =============================================== */
 
+const fibonacciSequence = function(num){
+    //base
+ if (num <= 0) {
+    return "Please enter a number greater than 0";
+  }
+  if (num === 1) {
+    return 1;
+  }
+  if (num === 2) {
+    return 1;
+  }
+  return fibonacciSequence(num - 1) + fibonacciSequence(num - 2);
+};
+
+ console.log(fibonacciSequence(8));
+
 /* ======== 7. Factorial =================
 =============================================== */
+
+factorial=(n)=>{
+  if(n === 1){
+    return 1
+  }
+  return n * factorial(n-1)
+}
+console.log(factorial(5))
 
 /* ======== 8. Find a way out of the maze ====
 =============================================== */
 
+/*==== not sure how to solve =====*/
+
 /* ======== 9. Find ALL the ways out of the maze =
 =============================================== */
+
+/*==== not sure how to solve =====*/
 
 /* ======== 10. Anagrams =================
 =============================================== */
 
+ function permut(string) {
+  if (string.length < 2) return string; 
+
+  var permutations = []; 
+  for (var i = 0; i < string.length; i++) {
+    var char = string[i];
+
+    if (string.indexOf(char) != i) 
+      continue; 
+
+    var remainingString = string.slice(0, i) + string.slice(i + 1, string.length);
+
+    for (var subPermutation of permut(remainingString))
+      permutations.push(char + subPermutation)
+  }
+  return permutations;
+}
+console.log(permut('east'));
+
 /* ======== 11. Organization Chart =================
+Write a recursive function that prints the following organization chart. 
+Your output should be as shown below with proper indentation to show the hierarchy. 
+You may store the org chart in an object and send that as an input to your program.
 =============================================== */
+
+console.log('org chart')
+const org = [
+{id: 'Zuckerberg', boss: null},
+  {id: 'Schroepfer', boss: 'Zuckerberg'},
+  {id: 'Schrage', boss: 'Zuckerberg'},
+  {id: 'Sandberg', boss: 'Zuckerberg'},
+  {id: 'Bosworth', boss:'Schroepfer' },
+  {id: 'Zhao', boss:'Schroepfer' },
+  {id: 'Steve', boss:'Bosworth' },
+  {id: 'Kyle', boss:'Bosworth' },
+  {id: 'Andra', boss:'Bosworth' },
+  {id: 'Richie', boss: 'Zhao'},
+  {id: 'Sofia', boss: 'Zhao'},
+  {id: 'Jen', boss: 'Zhao'},
+  {id: 'VanDyck', boss:'Schrage' },
+  {id: 'Swain', boss:'Schrage' },
+  {id: 'Sabrina', boss:'VanDyck' },
+  {id: 'Michelle', boss:'VanDyck' },
+  {id: 'Josh', boss:'VanDyck' },
+  {id: 'Blanch', boss:'Swain' },
+  {id: 'Tom', boss:'Swain' },
+  {id: 'Joe', boss:'Swain' },
+  {id: 'Goler', boss:'Sandberg' },
+  {id: 'Hernandez', boss:'Sandberg' },
+  {id: 'Moissinac', boss:'Sandberg' },
+  {id: 'Kelley', boss:'Sandberg' },
+  {id: 'Eddie', boss:'Goler' },
+  {id: 'Julie', boss:'Goler' },
+  {id: 'Annie', boss:'Goler' },
+  {id: 'Rowi', boss:'Hernandez'},
+  {id: 'Inga', boss:'Hernandez'},
+  {id: 'Morgan', boss:'Hernandez'},
+  {id: 'Amy', boss:'Moissinac'},
+  {id: 'Chuck', boss:'Moissinac'},
+  {id: 'Vinni', boss:'Moissinac'},
+  {id: 'Eric', boss:'Kelley'},
+  {id: 'Ana', boss:'Kelley'},
+  {id: 'Wes', boss:'Kelley'},
+];
+
+function organize(org, boss) {
+  let node = {};
+
+  org
+    .filter(item => item.boss === boss)
+    .forEach(item => node[item.id] = organize(org, item.id));
+  return node;  
+}
+
+console.log(JSON.stringify(organize(org, null)));
 
 /* ======== 12. Binary Representation =================
 =============================================== */
